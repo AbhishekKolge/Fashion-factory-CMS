@@ -1,0 +1,80 @@
+
+$theme-colors: (
+  'primary': #111,
+  'secondary': #696969,
+  'success': #03a685,
+  'info': #ff7d50,
+  'warning': #ffbe0b,
+  'danger': #ff5722,
+  'light': #fff,
+  'dark': #000,
+);
+
+$pagination-color: var(--bs-primary);
+$pagination-active-bg: var(--bs-primary);
+
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
+
+$xSmall: 576px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xLarge: 1200px;
+
+html {
+    @media screen and (max-width: $xSmall) {
+      font-size: 90%;
+    }
+    @media screen and (min-width: $large) {
+      font-size: 100%;
+    }
+}
+
+main {
+  min-height: 100%;
+  padding-top: 5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none
+}
+
+.form-control:focus ,
+.form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+#__next {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.reset-link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.no-border {
+  border: none;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.invalid {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
